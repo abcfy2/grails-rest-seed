@@ -3,6 +3,7 @@ package top.dteam.earth.backend
 import grails.databinding.converters.ValueConverter
 import grails.gorm.services.Service
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 
 import java.time.LocalDateTime
 import java.time.OffsetDateTime
@@ -11,9 +12,11 @@ import java.time.OffsetDateTime
 abstract class ExampleService {
 
     @Autowired
+    @Qualifier('grails.databinding.converters.ValueConverter(localDateTimeValueConverter)')
     ValueConverter localDateTimeValueConverter
 
     @Autowired
+    @Qualifier('grails.databinding.converters.ValueConverter(offsetTimeValueConverter)')
     ValueConverter offsetDateTimeValueConverter
 
     abstract Example get(Serializable id)

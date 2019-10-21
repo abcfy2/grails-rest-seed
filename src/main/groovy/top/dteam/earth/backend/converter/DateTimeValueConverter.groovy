@@ -3,6 +3,7 @@ package top.dteam.earth.backend.converter
 import grails.databinding.converters.ValueConverter
 import groovy.transform.CompileStatic
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 
 import java.time.LocalDateTime
 import java.time.OffsetDateTime
@@ -17,9 +18,11 @@ class DateTimeValueConverter implements ValueConverter {
     final Class targetType = OffsetDateTime
 
     @Autowired
+    @Qualifier('grails.databinding.converters.ValueConverter(localDateTimeValueConverter)')
     ValueConverter localDateTimeValueConverter
 
     @Autowired
+    @Qualifier('grails.databinding.converters.ValueConverter(offsetTimeValueConverter)')
     ValueConverter offsetDateTimeValueConverter
 
     @Override
