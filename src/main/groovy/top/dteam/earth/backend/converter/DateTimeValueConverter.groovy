@@ -22,7 +22,7 @@ class DateTimeValueConverter implements ValueConverter {
     ValueConverter localDateTimeValueConverter
 
     @Autowired
-    @Qualifier('grails.databinding.converters.ValueConverter(offsetTimeValueConverter)')
+    @Qualifier('grails.databinding.converters.ValueConverter(offsetDateTimeValueConverter)')
     ValueConverter offsetDateTimeValueConverter
 
     @Override

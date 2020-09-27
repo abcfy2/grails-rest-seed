@@ -1,10 +1,6 @@
 Thumbs.db
 build/
 out/
-images/
-*.iml
-*.ipr
-*.iws
 *.log
 *.log.*
 .*

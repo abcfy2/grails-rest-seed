@@ -16,7 +16,7 @@ abstract class ExampleService {
     ValueConverter localDateTimeValueConverter
 
     @Autowired
-    @Qualifier('grails.databinding.converters.ValueConverter(offsetTimeValueConverter)')
+    @Qualifier('grails.databinding.converters.ValueConverter(offsetDateTimeValueConverter)')
     ValueConverter offsetDateTimeValueConverter
 
     abstract Example get(Serializable id)
